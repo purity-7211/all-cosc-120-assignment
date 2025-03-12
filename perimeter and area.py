@@ -2,7 +2,6 @@ print("choose options a, b or c ")
 print("1.area and circumference of a circle")
 print("2.area and perimeter of a triangle")
 print("3.area and perimeter of a rectangle")
-print("4.area and perimeter of a square")
 choice=int(input("choose among the choices :"))
 
 from math import pi
@@ -27,29 +26,6 @@ elif choice ==3:
         perimeter=(length+width+length+width)
         print("area of rectangle",area)
         print("perimeter of rectangle",perimeter)
-elif choice ==4:
-          #input the side (s)
-def calculate_perimeter(side):
-    # Perimeter of the square
-    perimeter = 4 * side
-    return perimeter
 
-def calculate_area(side):
-    # Area of the square
-    area = side ** 2
-    return area
-
-# Input the side of the square
-side = float(input("Enter the side length of the square: "))
-
-# Calculate the perimeter
-perimeter = calculate_perimeter(side)
-
-# Calculate the area
-area = calculate_area(side)
-
-# Display the results
-print(f"The perimeter of the square is: {perimeter}")
-print(f"The area of the square is: {area}")
 else:
-        print("invalid option choose 1,2,3 or 4")
+        print("invalid option choose 1,2 or 3")
