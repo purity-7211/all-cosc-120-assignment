@@ -395,4 +395,126 @@ To run the script, execute the following command:
 
 ```sh
 python recursion.py
+```README OF REVERSE
+# Reverse List Using Slicing
+
+This project contains a Python script that reverses a list of numbers using slicing based on user input for the starting and ending digits.
+
+## File Structure
+
+- `purity.py`: Contains the main logic for reversing a list using slicing.
+
+## Usage
+
+To use the script, simply run the `purity.py` file. It will prompt you to enter the starting and ending digits, generate a list of numbers in that range, and then reverse the list using slicing.
+
+### Example
+
+```python
+def main():
+    # Take user input for starting and ending digits
+    start = int(input("Enter the starting digit: "))
+    end = int(input("Enter the ending digit: "))
+
+    # Check if start is less than or equal to end
+    if start > end:
+        print("Starting digit should be less than or equal to ending digit.")
+        return
+
+    # Generate list of numbers between start and end (inclusive)
+    num_list = list(range(start, end + 1))
+    print("Original list:", num_list)
+
+    # Reverse the list using slicing [::-1]
+    reversed_list = num_list[::-1]
+    print("Reversed list:", reversed_list)
+
+if __name__ == "__main__":
+    main()
+```
+
+### Output
+
+```
+Enter the starting digit: 1
+Enter the ending digit: 10
+Original list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Reversed list: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+## Test Cases
+
+```python
+# No direct test cases as it involves user input
+```
+
+## Slicing Using Python Slicing Concepts
+
+### Example
+
+```python
+# Define a list of numbers
+numbers = list(range(1, 21))
+
+# Slice the first 5 numbers
+first_5_numbers = numbers[:5]
+print("First 5 numbers:", first_5_numbers)
+
+# Slice the last 5 numbers
+last_5_numbers = numbers[-5:]
+print("Last 5 numbers:", last_5_numbers)
+
+# Slice numbers from index 5 to 15
+middle_numbers = numbers[5:16]
+print("Numbers from index 5 to 15:", middle_numbers)
+```
+
+### Output
+
+```
+First 5 numbers: [1, 2, 3, 4, 5]
+Last 5 numbers: [16, 17, 18, 19, 20]
+Numbers from index 5 to 15: [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+```
+
+## Algorithm to Compute Factorial Product of Numbers
+
+### Algorithm
+
+1. Define a function `factorial(n)` that takes an integer `n` as input.
+2. If `n` is 0 or 1, return 1.
+3. Otherwise, return `n * factorial(n-1)`.
+
+### Code
+
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Example usage
+print(factorial(5))  # Output: 120
+```
+
+### Test Cases
+
+```python
+assert factorial(0) == 1
+assert factorial(1) == 1
+assert factorial(5) == 120
+assert factorial(7) == 5040
+```
+
+## Requirements
+
+- Python 3.x
+
+## Running the Script
+
+To run the script, execute the following command:
+
+```sh
+python purity.py
 ```
